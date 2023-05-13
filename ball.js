@@ -10,7 +10,8 @@ class Ball {
         const ballEl = document.createElement('div');
         ballEl.classList.add('ball');
         ballEl.style.background = obj.color;
-        document.body.appendChild(ballEl);
+        const gameCotainer = document.querySelector('#gameContainer');
+        gameCotainer.appendChild(ballEl);
         this.initListeners();
         this.ballEl = ballEl;
         this.top = 0;
@@ -19,18 +20,30 @@ class Ball {
         this.controls = obj.controls;
     }
     moveRight() {
+        if (this.left >= 900) {
+            return;
+        }
         this.left += this.speed;
         this.ballEl.style.left = `${this.left}px`;
     }
     moveLeft() {
+        if (this.left <= 0) {
+            return;
+        }
         this.left -= this.speed;
         this.ballEl.style.left = `${this.left}px`;
     }
     moveDown() {
+        if (this.top >= 700) {
+            return;
+        }
         this.top += this.speed;
         this.ballEl.style.top = `${this.top}px`;
     }
     moveUp() {
+        if (this.top <= 0) {
+            return;
+        }
         this.top -= this.speed;
         this.ballEl.style.top = `${this.top}px`;
     }
