@@ -7,8 +7,10 @@ class Food {
         this.initJump();
     }
     jump() {
-        this.el.style.left = Math.floor(Math.random() * 1000) + 'px';
-        this.el.style.top = Math.floor(Math.random() * 800) + 'px';
+        this.left = Math.floor(Math.random() * 1000);
+        this.top = Math.floor(Math.random() * 800);
+        this.el.style.left = this.left + 'px';
+        this.el.style.top = this.top  + 'px';
     }
     initJump() {
         this.jump();

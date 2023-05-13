@@ -7,6 +7,7 @@
 
 class Ball {
     constructor(obj) {
+        this.food = obj.food;
         const ballEl = document.createElement('div');
         ballEl.classList.add('ball');
         ballEl.style.background = obj.color;
@@ -64,6 +65,7 @@ class Ball {
                     break;
                 default:
             }
+            console.log(this.food.left, this.food.top);
         });
     }
 }

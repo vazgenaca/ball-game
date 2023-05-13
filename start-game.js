@@ -1,5 +1,13 @@
+
+
+
+
+
+
 function start() {
+    const food = new Food();
     const ball = new Ball({
+        food,
         color: 'green',
         speed: 20,
         controls: {
@@ -10,6 +18,7 @@ function start() {
         }
     });
     const ball2 = new Ball({
+        food,
         color: 'blue',
         speed: 30,
         controls: {
@@ -19,5 +28,5 @@ function start() {
             down: 'KeyS',
         }
     });
-    new Food()
+    
 }
