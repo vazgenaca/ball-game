@@ -19,6 +19,8 @@ class Ball {
         this.left = 0;
         this.speed = obj.speed;
         this.controls = obj.controls;
+        this.color = obj.color;
+        this.ballEl.innerText = 0;
     }
     moveRight() {
         if (this.left >= 900) {
@@ -65,8 +67,20 @@ class Ball {
                     break;
                 default:
             }
-            console.log(this.food.left, this.food.top);
+            this.isFoodEated();
         });
+    }
+    isFoodEated() {
+        const firstCondition = this.top + 100 >= this.food.top;
+        const secondCondition = this.left + 100 >= this.food.left;
+        const thridCondition = this.left <= this.food.left + 30;
+        const fourthCondition = this.left <= this.food.left + 30;
+
+        if (firstCondition && secondCondition && thridCondition && fourthCondition) {
+            const eatCount = +this.ballEl.innerText;
+            this.ballEl.innerText = eatCount + 1;
+            this.food.jump();
+        }
     }
 }
 
