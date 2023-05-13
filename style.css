@@ -20,3 +20,10 @@ body {
     background-color: aqua;
 }
 
+.food {
+    background-color: red;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+

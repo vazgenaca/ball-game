@@ -19,4 +19,5 @@ function start() {
             down: 'KeyS',
         }
     });
+    new Food()
 }
