@@ -6,11 +6,16 @@ class Ball {
         const ball = document.createElement("div");
         ball.classList.add("circle");
         document.body.appendChild(ball);
+        this.size = size || 100;
+
         this.ball = ball;
         this.ball.style.width = `${size}px`;
         this.ball.style.height =`${size}px`;
         this.changecolor();
         this.jump();
+        this.isBigBall = false;
+
+        this.listenMouseEvent();
     }
     changecolor() {
         const colors = ["red","green","pink","black","blue","yellow","violet"];
@@ -27,10 +32,31 @@ class Ball {
         this.changecolor();
         this.jump();
     }
+    toggleSize() {
+        const biggerSize = this.size * 2;
+        const smallerSize = this.size / 2; 
+        if (this.isBigBall) {
+            this.ball.style.width = `${smallerSize}px`;
+            this.ball.style.height =`${smallerSize}px`;
+        } else {
+            this.ball.style.width = `${biggerSize}px`;
+            this.ball.style.height =`${biggerSize}px`;
+        }
+        this.isBigBall = !this.isBigBall;
+    }
+    listenMouseEvent() { 
+        this.ball.addEventListener('mouseover', () => {
+            this.toggleSize();
+        });
+        this.ball.addEventListener('mouseleave', () => {
+            this.toggleSize();
+        });
+    }
 }
 class BigBall extends Ball {
-    constructor() {
-        super(200)
+    constructor(size) {
+        super(200);
+        this.isBigBall = true;
     }
 }
 
