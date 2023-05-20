@@ -1,0 +1,18 @@
+.input-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+button {
+    font-size: 20px;
+}
+
+#todoInput {
+    font-size: 20px;
+}
+
+#containerTodos {
+    width: 500px;
+    margin: 0 auto;
+}
+
