@@ -1,0 +1,16 @@
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.square:nth-child(2n) {
+    background-color: green;
+}
+
+#changeRed {
+    position: fixed;
+    top: 400px;
+    left: 500px;
+    font-size: 100px;
+}
