@@ -1,0 +1,1 @@
+// when clicking validate, validate password and if it maches to the condition alert good, othervise error

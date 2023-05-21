@@ -1,0 +1,22 @@
+html, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.pswd-container input {
+    font-size: 20px;
+    width: 80%;
+}
+
+button {
+    font-size: 20px;
+}
+
+.hint {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 20px;
+}

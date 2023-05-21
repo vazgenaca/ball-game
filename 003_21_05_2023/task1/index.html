@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        (function() {
+            let isRed = true;
+            let count = 100;
+            while (count--) {
+                const top = Math.round(window.screen.availHeight * Math.random());
+                const left = Math.round(window.screen.availHeight * Math.random());
+                const el = document.createElement('div');
+                el.style.top = `${top}px`;
+                el.style.left = `${left}px`;
+                const classToAdd = isRed ? 'red' : 'green';
+                el.classList.add(classToAdd);
+                document.body.appendChild(el);
+                isRed = !isRed;
+            }
+        })();
+    </script>
+    <button id="redBtn">Show/Hide Red</button>
+    <button id="greenBtn">Show/Hide Green</button>
+    <script src="index.js"></script>
+</body>
+</html>
