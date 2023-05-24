@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+      const arr = [
+        {
+          isAdmin: false,
+          email: "Zachariah30@yahoo.com",
+          name: "Dallas Nader-Skiles",
+        },
+        { isAdmin: true, email: "Arnaldo63@hotmail.com", name: "Ebony Jerde" },
+        { isAdmin: true, email: "Mittie_Brown@yahoo.com", name: "Darrel Kuhn" },
+        {
+          isAdmin: false,
+          email: "Elmer.Stanton@gmail.com",
+          name: "Lee Predovic",
+        },
+        { isAdmin: true, email: "Vilma50@hotmail.com", name: "Forrest Larson" },
+        { isAdmin: true, email: "Maryse52@yahoo.com", name: "Jacob Maggio" },
+        {
+          isAdmin: false,
+          email: "Arvid_King38@hotmail.com",
+          name: "Christie Smith V",
+        },
+        {
+          isAdmin: false,
+          email: "Mustafa.Rohan61@hotmail.com",
+          name: "Myron Luettgen",
+        },
+        { isAdmin: false, email: "Trace90@gmail.com", name: "Wesley Beahan" },
+        {
+          isAdmin: false,
+          email: "Casimer19@hotmail.com",
+          name: "Kathleen McDermott Sr.",
+        },
+      ];
+      let count = 10;
+      window.getUsers = () => {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve(arr);
+          });
+        });
+      };
+    </script>
+    <button>Show admins</button>
+    <button>Show users</button>
+    <button>Show All</button>
+    <input type="text" placeholder="Add user: name:email" />
+    <button>Add user</button>
+
+    <div class="container">
+      <div class="user">John doe - test@mail.com -admin</div>
+      <div class="user">John doe - test@mail.com - not admin</div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

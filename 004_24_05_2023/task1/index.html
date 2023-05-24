@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        (function() {
+            let count = 32;
+            const availableClasses = ['red', 'green', 'blue', 'yellow']
+            while (count--) {
+                const el = document.createElement('div');
+                const size = parseInt(40 * Math.random()) + 20;
+                el.style.width = `${size}px`;
+                el.style.height = `${size}px`;
+                let top = parseInt(window.screen.availHeight * Math.random()) * 0.8;
+                let left = parseInt(window.screen.availWidth * Math.random()) * 0.7;
+                el.style.top = `${top}px`;
+                el.style.left = `${left}px`;
+                const index = parseInt(availableClasses.length * Math.random());
+                const classToAdd = availableClasses[index];
+                el.classList.add(classToAdd);
+                document.body.appendChild(el);
+            }
+        })();
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

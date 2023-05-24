@@ -1,0 +1,40 @@
+* {
+    transition: all 300ms linear;
+}
+
+#redBtn {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+}
+
+#greenBtn {
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    font-size: 20px;
+    color: white;
+    background-color: green;
+}
+
+.red, .green, .blue, .yellow {
+    position: fixed;
+    border: 1px solid grey;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
