@@ -1,8 +1,4 @@
-// numbers should grow starts from 0 up to dataset value
-
-// HINT: example of getting dataset value
 const elements = document.querySelectorAll('.number');
-
 
 Array.from(elements).forEach((element) => {
     let count = 0;
@@ -19,6 +15,3 @@ Array.from(elements).forEach((element) => {
         }
     }, speed);
 })
-
-
-// use setInterval function
