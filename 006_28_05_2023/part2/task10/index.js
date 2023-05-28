@@ -1,11 +1,14 @@
+
 /**
- * Convert string to number
+ * fill function body
+ * function should return how many "m" letters are in the string.
  */
-function stringToNumber() {
+const str = 'hmrdmkmirluiayh1kf1fmishqmfus';
+
+function get_m_count(str) {
 
 }
 
-const result = stringToNumber('100');
+const result = get_m_count(str);
 console.log(result);
-
 
